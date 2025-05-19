@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>丸子的Task 1 高频句型填空练习- day 1</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>丸子的Task 1 高频句型填空 - day 1</title>
   <style>
     html, body {
       margin: 0;
@@ -15,7 +15,7 @@
     }
 
     .container {
-      max-width: 700px;
+      max-width: 750px;
       margin: 40px auto;
       background: white;
       border-radius: 16px;
@@ -44,8 +44,8 @@
       margin-bottom: 10px;
     }
 
-    .inputs input[type="text"] {
-      width: 120px;
+    input[type="text"] {
+      width: 130px;
       padding: 6px;
       margin: 0 5px;
       font-size: 15px;
@@ -73,7 +73,7 @@
     .incorrect { color: red; }
 
     @media (max-width: 600px) {
-      .inputs input[type="text"] {
+      input[type="text"] {
         width: 90px;
         font-size: 14px;
       }
@@ -83,14 +83,14 @@
 <body>
 
   <div class="container">
-    <h2>丸子的Task 1 高频句型填空练习- day 1</h2>
+    <h2>丸子的Task 1 高频句型填空 - day 1</h2>
 
     <!-- 题目 1 -->
     <div class="question">
       <div class="english">
-        1. The <input type="text" id="q1_1"> <input type="text" id="q1_2"> the <input type="text" id="q1_3"> in Internet access.
+        1. The <input type="text" id="q1_1"> <input type="text" id="q1_2"> the <input type="text" id="q1_3"> of households with Internet access...
       </div>
-      <div class="translation">这张图表展示了互联网接入率的变化。</div>
+      <div class="translation">这张图表展示了五个国家在 1998 到 2008 年间家庭互联网接入比例的变化。</div>
       <button class="check-btn" onclick="checkQ1()">Check</button>
       <div class="feedback" id="fb_q1"></div>
     </div>
@@ -98,9 +98,9 @@
     <!-- 题目 2 -->
     <div class="question">
       <div class="english">
-        2. The graph <input type="text" id="q2_1"> the number of <input type="text" id="q2_2"> and <input type="text" id="q2_3"> graduates.
+        2. The graph <input type="text" id="q2_1"> the number of <input type="text" id="q2_2"> and <input type="text" id="q2_3"> university graduates...
       </div>
-      <div class="translation">这张图表比较了加拿大男性和女性大学毕业生的数量。</div>
+      <div class="translation">这张图表比较了 1992 到 2007 年加拿大男性和女性大学毕业生的数量。</div>
       <button class="check-btn" onclick="checkQ2()">Check</button>
       <div class="feedback" id="fb_q2"></div>
     </div>
@@ -108,51 +108,96 @@
     <!-- 题目 3 -->
     <div class="question">
       <div class="english">
-        3. The diagram <input type="text" id="q3_1"> <input type="text" id="q3_2"> about how electricity is <input type="text" id="q3_3">.
+        3. The diagram <input type="text" id="q3_1"> <input type="text" id="q3_2"> about how electricity is <input type="text" id="q3_3"> from geothermal energy.
       </div>
-      <div class="translation">这张图示说明了地热能源如何被转换成电能。</div>
+      <div class="translation">这张图说明了如何利用地热能发电。</div>
       <button class="check-btn" onclick="checkQ3()">Check</button>
       <div class="feedback" id="fb_q3"></div>
+    </div>
+
+    <!-- 题目 4 -->
+    <div class="question">
+      <div class="english">
+        4. The table <input type="text" id="q4_1"> data on the <input type="text" id="q4_2"> of waste <input type="text" id="q4_3">...
+      </div>
+      <div class="translation">这张表格展示了六个国家在三个不同年份产生垃圾的数量。</div>
+      <button class="check-btn" onclick="checkQ4()">Check</button>
+      <div class="feedback" id="fb_q4"></div>
+    </div>
+
+    <!-- 题目 5 -->
+    <div class="question">
+      <div class="english">
+        5. The figure <input type="text" id="q5_1"> <input type="text" id="q5_2"> of the steps <input type="text" id="q5_3"> in producing ceramic pots.
+      </div>
+      <div class="translation">这张图展示了制作陶罐的各个步骤。</div>
+      <button class="check-btn" onclick="checkQ5()">Check</button>
+      <div class="feedback" id="fb_q5"></div>
+    </div>
+
+    <!-- 题目 6 -->
+    <div class="question">
+      <div class="english">
+        6. Overall, it is <input type="text" id="q6_1"> that Internet access <input type="text" id="q6_2"> in all <input type="text" id="q6_3"> over the period.
+      </div>
+      <div class="translation">总体来看，各国的互联网接入率在该时期均有所上升。</div>
+      <button class="check-btn" onclick="checkQ6()">Check</button>
+      <div class="feedback" id="fb_q6"></div>
+    </div>
+
+    <!-- 题目 7 -->
+    <div class="question">
+      <div class="english">
+        7. A <input type="text" id="q7_1"> trend is that renewable energy <input type="text" id="q7_2"> steadily, while non-renewables <input type="text" id="q7_3">.
+      </div>
+      <div class="translation">一个明显的趋势是可再生能源稳定增长，而非可再生能源下降。</div>
+      <button class="check-btn" onclick="checkQ7()">Check</button>
+      <div class="feedback" id="fb_q7"></div>
+    </div>
+
+    <!-- 题目 8 -->
+    <div class="question">
+      <div class="english">
+        8. The most <input type="text" id="q8_1"> <input type="text" id="q8_2"> is the dramatic <input type="text" id="q8_3"> in online sales in the UK.
+      </div>
+      <div class="translation">最突出的特点是英国在线销售的显著增长。</div>
+      <button class="check-btn" onclick="checkQ8()">Check</button>
+      <div class="feedback" id="fb_q8"></div>
+    </div>
+
+    <!-- 题目 9 -->
+    <div class="question">
+      <div class="english">
+        9. It can be <input type="text" id="q9_1"> that car usage was consistently <input type="text" id="q9_2"> than public <input type="text" id="q9_3"> usage.
+      </div>
+      <div class="translation">可以看出，汽车使用率一直高于公共交通工具。</div>
+      <button class="check-btn" onclick="checkQ9()">Check</button>
+      <div class="feedback" id="fb_q9"></div>
     </div>
 
   </div>
 
   <script>
-    function checkQ1() {
-      const a1 = document.getElementById('q1_1').value.trim().toLowerCase();
-      const a2 = document.getElementById('q1_2').value.trim().toLowerCase();
-      const a3 = document.getElementById('q1_3').value.trim().toLowerCase();
-      const fb = document.getElementById('fb_q1');
-      if (a1 === "chart" && a2 === "illustrates" && a3 === "changes") {
-        fb.innerHTML = "<span class='correct'>✔ 正确！</span>";
+    function check(id, keys, answers) {
+      const feedback = document.getElementById("fb_" + id);
+      const user = keys.map(k => document.getElementById(k).value.trim().toLowerCase());
+      const correct = answers.every((ans, i) => user[i] === ans);
+      if (correct) {
+        feedback.innerHTML = "<span class='correct'>✔ 正确！</span>";
       } else {
-        fb.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：chart / illustrates / changes";
+        feedback.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：" + answers.join(" / ");
       }
     }
 
-    function checkQ2() {
-      const a1 = document.getElementById('q2_1').value.trim().toLowerCase();
-      const a2 = document.getElementById('q2_2').value.trim().toLowerCase();
-      const a3 = document.getElementById('q2_3').value.trim().toLowerCase();
-      const fb = document.getElementById('fb_q2');
-      if (a1 === "compares" && a2 === "male" && a3 === "female") {
-        fb.innerHTML = "<span class='correct'>✔ 正确！</span>";
-      } else {
-        fb.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：compares / male / female";
-      }
-    }
-
-    function checkQ3() {
-      const a1 = document.getElementById('q3_1').value.trim().toLowerCase();
-      const a2 = document.getElementById('q3_2').value.trim().toLowerCase();
-      const a3 = document.getElementById('q3_3').value.trim().toLowerCase();
-      const fb = document.getElementById('fb_q3');
-      if (a1 === "provides" && a2 === "information" && a3 === "produced") {
-        fb.innerHTML = "<span class='correct'>✔ 正确！</span>";
-      } else {
-        fb.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：provides / information / produced";
-      }
-    }
+    const checkQ1 = () => check("q1", ["q1_1", "q1_2", "q1_3"], ["chart", "illustrates", "percentage"]);
+    const checkQ2 = () => check("q2", ["q2_1", "q2_2", "q2_3"], ["compares", "male", "female"]);
+    const checkQ3 = () => check("q3", ["q3_1", "q3_2", "q3_3"], ["provides", "information", "produced"]);
+    const checkQ4 = () => check("q4", ["q4_1", "q4_2", "q4_3"], ["presents", "amount", "produced"]);
+    const checkQ5 = () => check("q5", ["q5_1", "q5_2", "q5_3"], ["gives", "details", "involved"]);
+    const checkQ6 = () => check("q6", ["q6_1", "q6_2", "q6_3"], ["clear", "increased", "countries"]);
+    const checkQ7 = () => check("q7", ["q7_1", "q7_2", "q7_3"], ["noticeable", "rose", "declined"]);
+    const checkQ8 = () => check("q8", ["q8_1", "q8_2", "q8_3"], ["striking", "feature", "increase"]);
+    const checkQ9 = () => check("q9", ["q9_1", "q9_2", "q9_3"], ["seen", "higher", "transport"]);
   </script>
 
 </body>

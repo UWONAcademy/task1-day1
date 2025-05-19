@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>丸子的Task 1 高频句型填空练习- day 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #5cb1a6, #6dc1b5);
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    .english {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .translation {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .inputs input[type="text"] {
+      width: 120px;
+      padding: 6px;
+      margin: 0 5px;
+      font-size: 15px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .check-btn {
+      margin-top: 8px;
+      background: #4caf91;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .correct { color: green; }
+    .incorrect { color: red; }
+
+    @media (max-width: 600px) {
+      .inputs input[type="text"] {
+        width: 90px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>丸子的Task 1 高频句型填空练习- day 1</h2>
+
+    <!-- 题目 1 -->
+    <div class="question">
+      <div class="english">
+        1. The <input type="text" id="q1_1"> <input type="text" id="q1_2"> the <input type="text" id="q1_3"> in Internet access.
+      </div>
+      <div class="translation">这张图表展示了互联网接入率的变化。</div>
+      <button class="check-btn" onclick="checkQ1()">Check</button>
+      <div class="feedback" id="fb_q1"></div>
+    </div>
+
+    <!-- 题目 2 -->
+    <div class="question">
+      <div class="english">
+        2. The graph <input type="text" id="q2_1"> the number of <input type="text" id="q2_2"> and <input type="text" id="q2_3"> graduates.
+      </div>
+      <div class="translation">这张图表比较了加拿大男性和女性大学毕业生的数量。</div>
+      <button class="check-btn" onclick="checkQ2()">Check</button>
+      <div class="feedback" id="fb_q2"></div>
+    </div>
+
+    <!-- 题目 3 -->
+    <div class="question">
+      <div class="english">
+        3. The diagram <input type="text" id="q3_1"> <input type="text" id="q3_2"> about how electricity is <input type="text" id="q3_3">.
+      </div>
+      <div class="translation">这张图示说明了地热能源如何被转换成电能。</div>
+      <button class="check-btn" onclick="checkQ3()">Check</button>
+      <div class="feedback" id="fb_q3"></div>
+    </div>
+
+  </div>
+
+  <script>
+    function checkQ1() {
+      const a1 = document.getElementById('q1_1').value.trim().toLowerCase();
+      const a2 = document.getElementById('q1_2').value.trim().toLowerCase();
+      const a3 = document.getElementById('q1_3').value.trim().toLowerCase();
+      const fb = document.getElementById('fb_q1');
+      if (a1 === "chart" && a2 === "illustrates" && a3 === "changes") {
+        fb.innerHTML = "<span class='correct'>✔ 正确！</span>";
+      } else {
+        fb.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：chart / illustrates / changes";
+      }
+    }
+
+    function checkQ2() {
+      const a1 = document.getElementById('q2_1').value.trim().toLowerCase();
+      const a2 = document.getElementById('q2_2').value.trim().toLowerCase();
+      const a3 = document.getElementById('q2_3').value.trim().toLowerCase();
+      const fb = document.getElementById('fb_q2');
+      if (a1 === "compares" && a2 === "male" && a3 === "female") {
+        fb.innerHTML = "<span class='correct'>✔ 正确！</span>";
+      } else {
+        fb.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：compares / male / female";
+      }
+    }
+
+    function checkQ3() {
+      const a1 = document.getElementById('q3_1').value.trim().toLowerCase();
+      const a2 = document.getElementById('q3_2').value.trim().toLowerCase();
+      const a3 = document.getElementById('q3_3').value.trim().toLowerCase();
+      const fb = document.getElementById('fb_q3');
+      if (a1 === "provides" && a2 === "information" && a3 === "produced") {
+        fb.innerHTML = "<span class='correct'>✔ 正确！</span>";
+      } else {
+        fb.innerHTML = "<span class='incorrect'>✘ 错误</span> 正确答案：provides / information / produced";
+      }
+    }
+  </script>
+
+</body>
+</html>
